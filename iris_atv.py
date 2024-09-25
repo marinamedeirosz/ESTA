@@ -17,8 +17,6 @@ pétala) têm a maior variabilidade dentro de cada espécie?
 IRIS = pd.read_csv('./dados/iris.csv')
 SPECIES = pd.unique(IRIS['Species']).tolist()
 
-# df.loc[df['B'] == 3, 'A']
-
 def line():
     print('-----------------------------------------------------')
 
@@ -33,6 +31,7 @@ def get_means():
         species_data = IRIS[IRIS['Species'] == spc]
         petal_length_mean = species_data['PetalLengthCm'].mean()
         means[spc] = petal_length_mean
+          
     return means
         
 # Respostas:
