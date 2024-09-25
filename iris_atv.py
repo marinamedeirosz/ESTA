@@ -18,7 +18,7 @@ IRIS = pd.read_csv('./dados/iris.csv')
 SPECIES = pd.unique(IRIS['Species']).tolist()
 
 def line():
-    print('-----------------------------------------------------')
+    print('---------------------------------------------------------------------------------------------------------------------')
 
 def get_species_data(your_species):
     species_data = pd.DataFrame(IRIS.loc[IRIS['Species'] == SPECIES[your_species]])
@@ -38,8 +38,8 @@ def get_means():
 # 1.
 species_means = get_means()
 max_species = max(species_means, key=lambda x: species_means[x])
-
+print('Questão 1:\n')
 for species, mean in species_means.items():
     print(f"A espécie {species} apresenta média de comprimento de pétala de {mean:.2f} cm.")
 line()
-print(f"A espécie {max_species} apresenta a maior média de comprimento de pétala. Média: {species_means[max_species]:.2f} cm.")
+print(f"A espécie {max_species} apresenta a maior média de comprimento de pétala. Média: {species_means[max_species]:.2f} cm.\n")
